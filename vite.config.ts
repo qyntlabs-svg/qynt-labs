@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/qynt-labs/",  // Add this line - must match your repo name
+  base: mode === "production" ? "/qynt-labs/" : "/",
   server: {
     host: "::",
     port: 8080,
